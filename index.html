@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic AI & OpenClaw - Panduan Lengkap</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Agentic<span class="highlight">AI</span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#intro">Pengenalan</a></li>
+                <li><a href="#how-it-works">Cara Kerja</a></li>
+                <li><a href="#components">Komponen</a></li>
+                <li><a href="#openclaw">OpenClaw</a></li>
+                <li><a href="#implementation">Implementasi</a></li>
+                <li><a href="#usecases">Use Cases</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="grid-overlay"></div>
+            <div class="particles" id="particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Teknologi AI Masa Depan
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">Agentic AI</span>
+                <span class="title-line gradient-text">& OpenClaw</span>
+            </h1>
+            <p class="hero-subtitle">
+                Panduan komprehensif tentang kecerdasan buatan yang otonom —
+                dari konsep dasar hingga implementasi nyata menggunakan framework OpenClaw
+            </p>
+            <div class="hero-cta">
+                <a href="#intro" class="btn btn-primary">
+                    Mulai Belajar
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M5 12l7 7 7-7"/>
+                    </svg>
+                </a>
+                <a href="#openclaw" class="btn btn-secondary">Lihat OpenClaw</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-num" data-target="95">0</span><span>%</span>
+                    <span class="stat-label">Efisiensi Tugas</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num" data-target="10">0</span><span>x</span>
+                    <span class="stat-label">Kecepatan Proses</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num" data-target="24">0</span><span>/7</span>
+                    <span class="stat-label">Operasi Otomatis</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="agent-brain">
+                <div class="brain-core">
+                    <div class="core-pulse"></div>
+                    <span class="core-icon">🧠</span>
+                </div>
+                <div class="agent-nodes">
+                    <div class="node node-1" data-label="Perceive">👁️</div>
+                    <div class="node node-2" data-label="Reason">💭</div>
+                    <div class="node node-3" data-label="Plan">📋</div>
+                    <div class="node node-4" data-label="Act">⚡</div>
+                    <div class="node node-5" data-label="Learn">📚</div>
+                    <div class="node node-6" data-label="Adapt">🔄</div>
+                </div>
+                <div class="connection-lines">
+                    <svg viewBox="0 0 300 300" class="connections-svg">
+                        <line x1="150" y1="150" x2="150" y2="30" class="conn-line"/>
+                        <line x1="150" y1="150" x2="255" y2="90" class="conn-line"/>
+                        <line x1="150" y1="150" x2="255" y2="210" class="conn-line"/>
+                        <line x1="150" y1="150" x2="150" y2="270" class="conn-line"/>
+                        <line x1="150" y1="150" x2="45" y2="210" class="conn-line"/>
+                        <line x1="150" y1="150" x2="45" y2="90" class="conn-line"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="section" id="intro">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Pengenalan</div>
+                <h2 class="section-title">Apa itu Agentic AI?</h2>
+                <p class="section-subtitle">
+                    Memahami paradigma baru kecerdasan buatan yang mampu bertindak secara otonom
+                </p>
+            </div>
+
+            <div class="intro-grid">
+                <div class="intro-text">
+                    <p class="lead-text">
+                        <strong>Agentic AI</strong> adalah sistem kecerdasan buatan yang dirancang untuk bertindak secara <em>otonom</em> dalam mencapai tujuan yang kompleks — bukan hanya merespons pertanyaan, tetapi secara aktif merencanakan, mengambil keputusan, menggunakan alat, dan beradaptasi dengan lingkungan.
+                    </p>
+                    <p>
+                        Berbeda dengan AI konvensional yang hanya menjawab satu pertanyaan per interaksi, Agentic AI mampu menjalankan rangkaian tindakan berurutan, memonitor hasilnya, dan menyesuaikan strategi secara dinamis untuk menyelesaikan tugas multi-langkah yang kompleks.
+                    </p>
+                    <div class="comparison-card">
+                        <div class="compare-item old">
+                            <h4>AI Konvensional</h4>
+                            <ul>
+                                <li>Merespons satu pertanyaan</li>
+                                <li>Tidak memiliki memori antar sesi</li>
+                                <li>Tidak dapat menggunakan tools</li>
+                                <li>Pasif menunggu instruksi</li>
+                            </ul>
+                        </div>
+                        <div class="compare-arrow">→</div>
+                        <div class="compare-item new">
+                            <h4>Agentic AI</h4>
+                            <ul>
+                                <li>Menjalankan tugas multi-langkah</li>
+                                <li>Memiliki memori & konteks persisten</li>
+                                <li>Menggunakan berbagai tools & API</li>
+                                <li>Aktif mengambil inisiatif</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro-visual">
+                    <div class="timeline-flow">
+                        <div class="flow-step active">
+                            <div class="step-icon">🎯</div>
+                            <div class="step-content">
+                                <h4>Goal Setting</h4>
+                                <p>Menerima dan memahami tujuan kompleks</p>
+                            </div>
+                        </div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-step">
+                            <div class="step-icon">🗺️</div>
+                            <div class="step-content">
+                                <h4>Planning</h4>
+                                <p>Merencanakan langkah-langkah pencapaian</p>
+                            </div>
+                        </div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-step">
+                            <div class="step-icon">🔧</div>
+                            <div class="step-content">
+                                <h4>Tool Use</h4>
+                                <p>Menggunakan tools, API, dan sumber daya</p>
+                            </div>
+                        </div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-step">
+                            <div class="step-icon">✅</div>
+                            <div class="step-content">
+                                <h4>Execution & Reflection</h4>
+                                <p>Eksekusi dan evaluasi hasil secara iteratif</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section section-dark" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Cara Kerja</div>
+                <h2 class="section-title">Loop Kognitif Agentic AI</h2>
+                <p class="section-subtitle">Siklus inti yang menggerakkan setiap agen AI modern</p>
+            </div>
+
+            <div class="loop-diagram">
+                <div class="loop-center">
+                    <div class="loop-core">
+                        <span>AGENT</span>
+                        <span class="loop-subtitle">Loop Utama</span>
+                    </div>
+                </div>
+                <div class="loop-steps">
+                    <div class="loop-step step-perceive">
+                        <div class="ls-icon">👁️</div>
+                        <h3>1. Perceive</h3>
+                        <p>Agen mengamati lingkungan, mengumpulkan data dari tools, API, database, dan input pengguna</p>
+                    </div>
+                    <div class="loop-step step-reason">
+                        <div class="ls-icon">🧠</div>
+                        <h3>2. Reason</h3>
+                        <p>Memproses informasi menggunakan LLM untuk memahami situasi dan konteks saat ini</p>
+                    </div>
+                    <div class="loop-step step-plan">
+                        <div class="ls-icon">📋</div>
+                        <h3>3. Plan</h3>
+                        <p>Merancang strategi dan urutan tindakan terbaik untuk mencapai tujuan</p>
+                    </div>
+                    <div class="loop-step step-act">
+                        <div class="ls-icon">⚡</div>
+                        <h3>4. Act</h3>
+                        <p>Mengeksekusi tindakan: memanggil tools, mengupdate state, berinteraksi dengan sistem</p>
+                    </div>
+                    <div class="loop-step step-reflect">
+                        <div class="ls-icon">🔍</div>
+                        <h3>5. Reflect</h3>
+                        <p>Mengevaluasi hasil, belajar dari pengalaman, dan menyesuaikan strategi</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pattern-section">
+                <h3 class="subsection-title">Pola Arsitektur Utama</h3>
+                <div class="patterns-grid">
+                    <div class="pattern-card">
+                        <div class="pattern-header">
+                            <span class="pattern-icon">🔗</span>
+                            <h4>ReAct Pattern</h4>
+                        </div>
+                        <p>Reasoning + Acting — agen bergantian berpikir (thought) dan bertindak (action) secara iteratif hingga mencapai jawaban akhir.</p>
+                        <div class="code-snippet">
+                            <code>Thought: Saya perlu mencari data...<br>Action: search("data cuaca")<br>Observation: Suhu 28°C<br>Thought: Sudah dapat data<br>Answer: Cuaca hari ini 28°C</code>
+                        </div>
+                    </div>
+                    <div class="pattern-card">
+                        <div class="pattern-header">
+                            <span class="pattern-icon">🌳</span>
+                            <h4>Tree of Thoughts</h4>
+                        </div>
+                        <p>Eksplorasi multiple jalur pemikiran secara paralel, memilih jalur terbaik berdasarkan evaluasi sistematis.</p>
+                        <div class="code-snippet">
+                            <code>Root: Masalah kompleks<br>├── Path A → Evaluasi: 0.8<br>├── Path B → Evaluasi: 0.5<br>└── Path C → Evaluasi: 0.9 ✓</code>
+                        </div>
+                    </div>
+                    <div class="pattern-card">
+                        <div class="pattern-header">
+                            <span class="pattern-icon">🤝</span>
+                            <h4>Multi-Agent System</h4>
+                        </div>
+                        <p>Beberapa agen bekerja sama, masing-masing dengan spesialisasi berbeda, dikoordinasi oleh orchestrator agent.</p>
+                        <div class="code-snippet">
+                            <code>Orchestrator<br>├── Research Agent<br>├── Code Agent<br>├── Review Agent<br>└── Deploy Agent</code>
+                        </div>
+                    </div>
+                    <div class="pattern-card">
+                        <div class="pattern-header">
+                            <span class="pattern-icon">💾</span>
+                            <h4>RAG + Memory</h4>
+                        </div>
+                        <p>Retrieval-Augmented Generation dikombinasikan dengan sistem memori untuk konteks yang kaya dan persisten.</p>
+                        <div class="code-snippet">
+                            <code>Query → Vector Search<br>→ Retrieve Context<br>→ Augment Prompt<br>→ Generate Response<br>→ Store Memory</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Components Section -->
+    <section class="section" id="components">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Komponen</div>
+                <h2 class="section-title">Anatomi Agentic AI</h2>
+                <p class="section-subtitle">Komponen-komponen esensial yang membangun sistem agen AI yang kuat</p>
+            </div>
+
+            <div class="components-grid">
+                <div class="component-card featured">
+                    <div class="comp-icon">🧠</div>
+                    <h3>LLM Core (Brain)</h3>
+                    <p>Model bahasa besar sebagai "otak" agen — bertanggung jawab untuk reasoning, pemahaman bahasa, dan pengambilan keputusan. Contoh: GPT-4, Claude, Gemini, Llama.</p>
+                    <div class="comp-tags">
+                        <span class="tag">Reasoning</span>
+                        <span class="tag">NLU</span>
+                        <span class="tag">Decision Making</span>
+                    </div>
+                </div>
+
+                <div class="component-card">
+                    <div class="comp-icon">🔧</div>
+                    <h3>Tool Use</h3>
+                    <p>Kemampuan memanggil fungsi eksternal: pencarian web, kalkulator, API, eksekusi kode, manipulasi file, dan banyak lagi.</p>
+                    <div class="comp-tags">
+                        <span class="tag">Function Calling</span>
+                        <span class="tag">API Integration</span>
+                    </div>
+                </div>
+
+                <div class="component-card">
+                    <div class="comp-icon">💾</div>
+                    <h3>Memory System</h3>
+                    <p>Sistem penyimpanan informasi multi-level: working memory (konteks), episodic memory (pengalaman), dan semantic memory (pengetahuan).</p>
+                    <div class="comp-tags">
+                        <span class="tag">Short-term</span>
+                        <span class="tag">Long-term</span>
+                        <span class="tag">Vector DB</span>
+                    </div>
+                </div>
+
+                <div class="component-card">
+                    <div class="comp-icon">🗺️</div>
+                    <h3>Planning Engine</h3>
+                    <p>Modul yang memecah tujuan kompleks menjadi sub-tugas yang dapat dikelola, membuat rencana eksekusi yang optimal.</p>
+                    <div class="comp-tags">
+                        <span class="tag">Task Decomposition</span>
+                        <span class="tag">Scheduling</span>
+                    </div>
+                </div>
+
+                <div class="component-card">
+                    <div class="comp-icon">👁️</div>
+                    <h3>Perception Module</h3>
+                    <p>Mengumpulkan dan memproses input dari berbagai sumber: teks, gambar, data terstruktur, output tools, dan lingkungan.</p>
+                    <div class="comp-tags">
+                        <span class="tag">Multi-modal</span>
+                        <span class="tag">Data Processing</span>
+                    </div>
+                </div>
+
+                <div class="component-card">
+                    <div class="comp-icon">🔄</div>
+                    <h3>Feedback Loop</h3>
+                    <p>Mekanisme evaluasi dan pembelajaran: menganalisis hasil, mengidentifikasi kesalahan, dan memperbaiki strategi secara dinamis.</p>
+                    <div class="comp-tags">
+                        <span class="tag">Self-evaluation</span>
+                        <span class="tag">Adaptation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OpenClaw Section -->
+    <section class="section section-dark" id="openclaw">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Framework</div>
+                <h2 class="section-title">OpenClaw Framework</h2>
+                <p class="section-subtitle">
+                    Framework open-source untuk membangun, mengelola, dan mendeploy sistem Agentic AI yang skalabel
+                </p>
+            </div>
+
+            <div class="openclaw-hero">
+                <div class="oc-logo">
+                    <span class="oc-icon">🦞</span>
+                    <div class="oc-name">
+                        <span>Open</span><span class="oc-highlight">Claw</span>
+                    </div>
+                    <div class="oc-version">v2.0 · Open Source</div>
+                </div>
+                <div class="oc-description">
+                    <p>
+                        <strong>OpenClaw</strong> adalah framework modular untuk membangun agen AI yang powerful. Dirancang dengan prinsip <em>composability</em> dan <em>extensibility</em>, OpenClaw memungkinkan developer untuk membuat agen kompleks dengan kode minimal namun fleksibilitas maksimal.
+                    </p>
+                    <div class="oc-highlights">
+                        <div class="oc-highlight-item">
+                            <span class="hl-icon">🚀</span>
+                            <div>
+                                <strong>Zero-config Start</strong>
+                                <span>Mulai dalam hitungan menit</span>
+                            </div>
+                        </div>
+                        <div class="oc-highlight-item">
+                            <span class="hl-icon">🔌</span>
+                            <div>
+                                <strong>Plugin Ecosystem</strong>
+                                <span>100+ tools siap pakai</span>
+                            </div>
+                        </div>
+                        <div class="oc-highlight-item">
+                            <span class="hl-icon">⚡</span>
+                            <div>
+                                <strong>Async-first</strong>
+                                <span>Performa tinggi untuk skala besar</span>
+                            </div>
+                        </div>
+                        <div class="oc-highlight-item">
+                            <span class="hl-icon">🛡️</span>
+                            <div>
+                                <strong>Built-in Safety</strong>
+                                <span>Guardrails dan monitoring bawaan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="openclaw-arch">
+                <h3 class="subsection-title">Arsitektur OpenClaw</h3>
+                <div class="arch-diagram">
+                    <div class="arch-layer layer-app">
+                        <span class="layer-label">Application Layer</span>
+                        <div class="arch-boxes">
+                            <div class="arch-box">Web App</div>
+                            <div class="arch-box">CLI</div>
+                            <div class="arch-box">API Server</div>
+                            <div class="arch-box">Custom UI</div>
+                        </div>
+                    </div>
+                    <div class="arch-connector"></div>
+                    <div class="arch-layer layer-agent">
+                        <span class="layer-label">Agent Orchestration Layer</span>
+                        <div class="arch-boxes">
+                            <div class="arch-box highlight-box">OpenClaw Core</div>
+                            <div class="arch-box">Router</div>
+                            <div class="arch-box">Scheduler</div>
+                        </div>
+                    </div>
+                    <div class="arch-connector"></div>
+                    <div class="arch-layer layer-services">
+                        <span class="layer-label">Service Layer</span>
+                        <div class="arch-boxes">
+                            <div class="arch-box">Memory</div>
+                            <div class="arch-box">Tools</div>
+                            <div class="arch-box">LLM Adapters</div>
+                            <div class="arch-box">Storage</div>
+                        </div>
+                    </div>
+                    <div class="arch-connector"></div>
+                    <div class="arch-layer layer-infra">
+                        <span class="layer-label">Infrastructure Layer</span>
+                        <div class="arch-boxes">
+                            <div class="arch-box">Vector DB</div>
+                            <div class="arch-box">Redis/Cache</div>
+                            <div class="arch-box">Observability</div>
+                            <div class="arch-box">Auth</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="openclaw-features">
+                <h3 class="subsection-title">Fitur Utama OpenClaw</h3>
+                <div class="features-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="agents">Agent Management</button>
+                        <button class="tab-btn" data-tab="tools">Tool Registry</button>
+                        <button class="tab-btn" data-tab="memory">Memory System</button>
+                        <button class="tab-btn" data-tab="observability">Observability</button>
+                    </div>
+                    <div class="tab-contents">
+                        <div class="tab-content active" id="tab-agents">
+                            <div class="tab-grid">
+                                <div class="tab-info">
+                                    <h4>Manajemen Agen yang Fleksibel</h4>
+                                    <ul class="feature-list">
+                                        <li>Definisi agen deklaratif dengan YAML atau Python</li>
+                                        <li>Hot-reload konfigurasi tanpa restart</li>
+                                        <li>Multi-agent orchestration built-in</li>
+                                        <li>Hierarchical agent delegation</li>
+                                        <li>State management otomatis</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-code">
+                                    <div class="code-header">
+                                        <span class="code-dot red"></span>
+                                        <span class="code-dot yellow"></span>
+                                        <span class="code-dot green"></span>
+                                        <span class="code-title">agent_config.yaml</span>
+                                    </div>
+                                    <pre class="code-block"><code>name: research_agent
+model: claude-3-opus
+role: |
+  Kamu adalah research agent yang
+  ahli dalam mencari dan menganalisis
+  informasi secara mendalam.
+tools:
+  - web_search
+  - document_reader
+  - summarizer
+memory:
+  type: vector
+  embedding: openai
+  max_tokens: 8000
+safety:
+  guardrails: enabled
+  max_iterations: 20</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content" id="tab-tools">
+                            <div class="tab-grid">
+                                <div class="tab-info">
+                                    <h4>Registry Tools yang Extensible</h4>
+                                    <ul class="feature-list">
+                                        <li>50+ built-in tools siap pakai</li>
+                                        <li>Custom tool dalam 5 baris kode</li>
+                                        <li>Tool versioning dan compatibility</li>
+                                        <li>Async tool execution</li>
+                                        <li>Tool chaining dan composition</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-code">
+                                    <div class="code-header">
+                                        <span class="code-dot red"></span>
+                                        <span class="code-dot yellow"></span>
+                                        <span class="code-dot green"></span>
+                                        <span class="code-title">custom_tool.py</span>
+                                    </div>
+                                    <pre class="code-block"><code>from openclaw import tool
+
+@tool(
+    name="weather_api",
+    description="Mendapatkan cuaca terkini"
+)
+async def get_weather(city: str) -> dict:
+    """Ambil data cuaca untuk kota."""
+    response = await http.get(
+        f"https://api.weather.com/{city}"
+    )
+    return response.json()
+
+# Registrasi otomatis!
+# Agen dapat langsung menggunakan tool ini</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content" id="tab-memory">
+                            <div class="tab-grid">
+                                <div class="tab-info">
+                                    <h4>Sistem Memori Multi-layer</h4>
+                                    <ul class="feature-list">
+                                        <li>Working memory untuk konteks aktif</li>
+                                        <li>Episodic memory untuk riwayat</li>
+                                        <li>Semantic memory via vector store</li>
+                                        <li>Cross-session persistence</li>
+                                        <li>Memory pruning otomatis</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-code">
+                                    <div class="code-header">
+                                        <span class="code-dot red"></span>
+                                        <span class="code-dot yellow"></span>
+                                        <span class="code-dot green"></span>
+                                        <span class="code-title">memory_usage.py</span>
+                                    </div>
+                                    <pre class="code-block"><code>from openclaw import Agent, Memory
+
+# Setup memori persisten
+memory = Memory(
+    backend="chromadb",  # atau pinecone
+    embedding="text-embedding-3-small"
+)
+
+agent = Agent(
+    name="assistant",
+    memory=memory
+)
+
+# Simpan informasi penting
+await agent.remember(
+    "User lebih suka Python",
+    tags=["preference", "coding"]
+)
+
+# Recall otomatis saat relevan
+response = await agent.run(
+    "Tulis script untuk scraping"
+)
+# Agent ingat preferensi Python!</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content" id="tab-observability">
+                            <div class="tab-grid">
+                                <div class="tab-info">
+                                    <h4>Monitoring & Observability</h4>
+                                    <ul class="feature-list">
+                                        <li>Distributed tracing untuk setiap langkah</li>
+                                        <li>Token usage tracking real-time</li>
+                                        <li>Agent performance metrics</li>
+                                        <li>Error detection & alerting</li>
+                                        <li>Dashboard bawaan (OpenClaw UI)</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-code">
+                                    <div class="code-header">
+                                        <span class="code-dot red"></span>
+                                        <span class="code-dot yellow"></span>
+                                        <span class="code-dot green"></span>
+                                        <span class="code-title">monitoring.py</span>
+                                    </div>
+                                    <pre class="code-block"><code>from openclaw import Agent
+from openclaw.observability import Tracer
+
+# Setup tracing otomatis
+tracer = Tracer(
+    backend="opentelemetry",
+    export_to="jaeger"  # atau datadog
+)
+
+agent = Agent(
+    name="production_agent",
+    tracer=tracer
+)
+
+# Setiap langkah otomatis di-trace:
+# - Tool calls & latency
+# - Token usage
+# - Decision reasoning
+# - Errors & retries
+#
+# Akses dashboard di:
+# http://localhost:4317/openclaw-ui</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Section -->
+    <section class="section" id="implementation">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Implementasi</div>
+                <h2 class="section-title">Membangun Agen dengan OpenClaw</h2>
+                <p class="section-subtitle">Tutorial langkah demi langkah dari instalasi hingga deployment</p>
+            </div>
+
+            <div class="impl-steps">
+                <!-- Step 1 -->
+                <div class="impl-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content-wrap">
+                        <h3>Instalasi & Setup</h3>
+                        <p>Mulai dengan menginstal OpenClaw dan mengkonfigurasi environment.</p>
+                        <div class="code-block-wrap">
+                            <div class="code-header">
+                                <span class="code-dot red"></span>
+                                <span class="code-dot yellow"></span>
+                                <span class="code-dot green"></span>
+                                <span class="code-title">terminal</span>
+                                <button class="copy-btn" data-code="install">Copy</button>
+                            </div>
+                            <pre class="code-block"><code><span class="code-comment"># Install OpenClaw</span>
+pip install openclaw
+
+<span class="code-comment"># Atau dengan semua dependencies</span>
+pip install openclaw[all]
+
+<span class="code-comment"># Init project baru</span>
+openclaw init my-agent-project
+cd my-agent-project
+
+<span class="code-comment"># Setup environment variables</span>
+cp .env.example .env
+<span class="code-comment"># Edit .env dengan API keys Anda:</span>
+<span class="code-comment"># OPENAI_API_KEY=sk-...</span>
+<span class="code-comment"># ANTHROPIC_API_KEY=sk-ant-...</span></code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="impl-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content-wrap">
+                        <h3>Membuat Agen Pertama</h3>
+                        <p>Definisikan dan jalankan agen sederhana dengan beberapa tools.</p>
+                        <div class="code-block-wrap">
+                            <div class="code-header">
+                                <span class="code-dot red"></span>
+                                <span class="code-dot yellow"></span>
+                                <span class="code-dot green"></span>
+                                <span class="code-title">basic_agent.py</span>
+                                <button class="copy-btn" data-code="basic">Copy</button>
+                            </div>
+                            <pre class="code-block"><code><span class="code-keyword">import</span> asyncio
+<span class="code-keyword">from</span> openclaw <span class="code-keyword">import</span> Agent
+<span class="code-keyword">from</span> openclaw.tools <span class="code-keyword">import</span> WebSearch, Calculator, CodeRunner
+
+<span class="code-comment"># Definisi agen sederhana</span>
+agent = Agent(
+    name=<span class="code-string">"my_first_agent"</span>,
+    model=<span class="code-string">"claude-3-5-sonnet-20241022"</span>,
+    role=<span class="code-string">"""
+    Kamu adalah asisten AI yang helpful dan cerdas.
+    Gunakan tools yang tersedia untuk membantu
+    pengguna menyelesaikan tugas mereka.
+    """</span>,
+    tools=[
+        WebSearch(),
+        Calculator(),
+        CodeRunner(language=<span class="code-string">"python"</span>)
+    ],
+    max_iterations=<span class="code-number">15</span>
+)
+
+<span class="code-comment"># Jalankan agen</span>
+<span class="code-keyword">async def</span> main():
+    result = <span class="code-keyword">await</span> agent.run(
+        <span class="code-string">"Cari informasi terbaru tentang AI, "</span>
+        <span class="code-string">"lalu buat ringkasan dalam 200 kata"</span>
+    )
+    <span class="code-keyword">print</span>(result.output)
+
+asyncio.run(main())</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="impl-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content-wrap">
+                        <h3>Multi-Agent System</h3>
+                        <p>Bangun sistem dengan beberapa agen yang bekerja sama secara terkoordinasi.</p>
+                        <div class="code-block-wrap">
+                            <div class="code-header">
+                                <span class="code-dot red"></span>
+                                <span class="code-dot yellow"></span>
+                                <span class="code-dot green"></span>
+                                <span class="code-title">multi_agent.py</span>
+                                <button class="copy-btn" data-code="multi">Copy</button>
+                            </div>
+                            <pre class="code-block"><code><span class="code-keyword">from</span> openclaw <span class="code-keyword">import</span> Agent, Orchestrator
+<span class="code-keyword">from</span> openclaw.tools <span class="code-keyword">import</span> WebSearch, CodeRunner, FileTool
+
+<span class="code-comment"># Agen Spesialis</span>
+researcher = Agent(
+    name=<span class="code-string">"researcher"</span>,
+    model=<span class="code-string">"claude-3-5-sonnet-20241022"</span>,
+    role=<span class="code-string">"Research dan kumpulkan informasi akurat"</span>,
+    tools=[WebSearch()]
+)
+
+coder = Agent(
+    name=<span class="code-string">"coder"</span>,
+    model=<span class="code-string">"claude-3-5-sonnet-20241022"</span>,
+    role=<span class="code-string">"Tulis kode Python yang clean dan efisien"</span>,
+    tools=[CodeRunner(), FileTool()]
+)
+
+reviewer = Agent(
+    name=<span class="code-string">"reviewer"</span>,
+    model=<span class="code-string">"claude-3-opus-20240229"</span>,
+    role=<span class="code-string">"Review kode dan berikan feedback detail"</span>,
+    tools=[CodeRunner()]
+)
+
+<span class="code-comment"># Orchestrator mengkoordinasi agen</span>
+orchestrator = Orchestrator(
+    agents=[researcher, coder, reviewer],
+    strategy=<span class="code-string">"sequential"</span>,  <span class="code-comment"># atau "parallel"</span>
+    max_handoffs=<span class="code-number">10</span>
+)
+
+<span class="code-comment"># Jalankan pipeline</span>
+result = <span class="code-keyword">await</span> orchestrator.run(
+    <span class="code-string">"Buat REST API sederhana untuk manajemen todo"</span>
+)</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="impl-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content-wrap">
+                        <h3>Agen dengan Memori Persisten</h3>
+                        <p>Tambahkan kemampuan mengingat informasi lintas sesi menggunakan vector store.</p>
+                        <div class="code-block-wrap">
+                            <div class="code-header">
+                                <span class="code-dot red"></span>
+                                <span class="code-dot yellow"></span>
+                                <span class="code-dot green"></span>
+                                <span class="code-title">memory_agent.py</span>
+                                <button class="copy-btn" data-code="memory">Copy</button>
+                            </div>
+                            <pre class="code-block"><code><span class="code-keyword">from</span> openclaw <span class="code-keyword">import</span> Agent
+<span class="code-keyword">from</span> openclaw.memory <span class="code-keyword">import</span> VectorMemory, EpisodicMemory
+<span class="code-keyword">from</span> openclaw.memory.backends <span class="code-keyword">import</span> ChromaDB
+
+<span class="code-comment"># Setup sistem memori</span>
+long_term_memory = VectorMemory(
+    backend=ChromaDB(collection=<span class="code-string">"user_data"</span>),
+    embedding_model=<span class="code-string">"text-embedding-3-small"</span>,
+    top_k=<span class="code-number">5</span>  <span class="code-comment"># Ambil 5 memory paling relevan</span>
+)
+
+episodic_memory = EpisodicMemory(
+    max_episodes=<span class="code-number">100</span>,
+    summarize_after=<span class="code-number">20</span>  <span class="code-comment"># Auto-summarize setelah 20 interaksi</span>
+)
+
+agent = Agent(
+    name=<span class="code-string">"personal_assistant"</span>,
+    model=<span class="code-string">"claude-3-5-sonnet-20241022"</span>,
+    role=<span class="code-string">"Asisten personal yang mengingat preferensi user"</span>,
+    memory=[long_term_memory, episodic_memory],
+    tools=[<span class="code-string">"web_search"</span>, <span class="code-string">"calendar"</span>, <span class="code-string">"email"</span>]
+)
+
+<span class="code-comment"># Sesi 1: Menyimpan preferensi</span>
+<span class="code-keyword">await</span> agent.run(<span class="code-string">"Saya lebih suka Python untuk backend"</span>)
+
+<span class="code-comment"># Sesi 2 (lain waktu): Agent masih ingat!</span>
+response = <span class="code-keyword">await</span> agent.run(
+    <span class="code-string">"Rekomendasikan framework web untuk project saya"</span>
+)
+<span class="code-comment"># → Agent akan merekomendasikan FastAPI/Django (Python)</span></code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="impl-step">
+                    <div class="step-number">05</div>
+                    <div class="step-content-wrap">
+                        <h3>Deploy ke Production</h3>
+                        <p>Jadikan agen Anda accessible sebagai REST API atau service yang skalabel.</p>
+                        <div class="code-block-wrap">
+                            <div class="code-header">
+                                <span class="code-dot red"></span>
+                                <span class="code-dot yellow"></span>
+                                <span class="code-dot green"></span>
+                                <span class="code-title">server.py</span>
+                                <button class="copy-btn" data-code="deploy">Copy</button>
+                            </div>
+                            <pre class="code-block"><code><span class="code-keyword">from</span> openclaw.server <span class="code-keyword">import</span> AgentServer
+<span class="code-keyword">from</span> openclaw <span class="code-keyword">import</span> Agent
+
+<span class="code-comment"># Definisi agen</span>
+agent = Agent(
+    name=<span class="code-string">"production_agent"</span>,
+    model=<span class="code-string">"claude-3-5-sonnet-20241022"</span>,
+    <span class="code-comment"># ... konfigurasi agen</span>
+)
+
+<span class="code-comment"># Bungkus sebagai HTTP server</span>
+server = AgentServer(
+    agent=agent,
+    host=<span class="code-string">"0.0.0.0"</span>,
+    port=<span class="code-number">8080</span>,
+
+    <span class="code-comment"># Rate limiting</span>
+    rate_limit=<span class="code-string">"100/minute"</span>,
+
+    <span class="code-comment"># Auth middleware</span>
+    auth=<span class="code-string">"bearer_token"</span>,
+
+    <span class="code-comment"># WebSocket untuk streaming</span>
+    streaming=<span class="code-keyword">True</span>
+)
+
+<span class="code-comment"># Run server</span>
+<span class="code-comment"># Endpoints otomatis tersedia:</span>
+<span class="code-comment"># POST /agent/run       → Jalankan agen</span>
+<span class="code-comment"># GET  /agent/status    → Status agen</span>
+<span class="code-comment"># WS   /agent/stream    → Streaming output</span>
+server.start()
+
+<span class="code-comment"># Atau deploy dengan Docker:</span>
+<span class="code-comment"># openclaw deploy --target docker</span>
+<span class="code-comment"># openclaw deploy --target kubernetes</span></code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="section section-dark" id="usecases">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Use Cases</div>
+                <h2 class="section-title">Aplikasi Dunia Nyata</h2>
+                <p class="section-subtitle">Contoh penerapan Agentic AI dan OpenClaw di berbagai industri</p>
+            </div>
+
+            <div class="usecases-grid">
+                <div class="usecase-card" data-category="dev">
+                    <div class="uc-icon">💻</div>
+                    <div class="uc-category">Software Development</div>
+                    <h3>Autonomous Code Review</h3>
+                    <p>Agen yang secara otomatis mereview PR, mendeteksi bug, mengusulkan optimasi, dan bahkan melakukan auto-fix untuk issue sederhana.</p>
+                    <div class="uc-metrics">
+                        <span class="metric">
+                            <strong>80%</strong> lebih cepat
+                        </span>
+                        <span class="metric">
+                            <strong>95%</strong> bug terdeteksi
+                        </span>
+                    </div>
+                </div>
+
+                <div class="usecase-card" data-category="research">
+                    <div class="uc-icon">🔬</div>
+                    <div class="uc-category">Research & Analysis</div>
+                    <h3>Research Automation</h3>
+                    <p>Agen penelitian yang mengumpulkan literatur, menganalisis data, menyintesis temuan, dan menghasilkan laporan komprehensif secara otomatis.</p>
+                    <div class="uc-metrics">
+                        <span class="metric">
+                            <strong>10x</strong> lebih banyak data
+                        </span>
+                        <span class="metric">
+                            <strong>5x</strong> lebih cepat
+                        </span>
+                    </div>
+                </div>
+
+                <div class="usecase-card" data-category="business">
+                    <div class="uc-icon">📊</div>
+                    <div class="uc-category">Business Intelligence</div>
+                    <h3>Automated Analytics</h3>
+                    <p>Agen BI yang memonitor KPI secara real-time, mengidentifikasi anomali, menganalisis tren, dan menghasilkan insight actionable secara proaktif.</p>
+                    <div class="uc-metrics">
+                        <span class="metric">
+                            <strong>24/7</strong> monitoring
+                        </span>
+                        <span class="metric">
+                            <strong>60%</strong> lebih hemat
+                        </span>
+                    </div>
+                </div>
+
+                <div class="usecase-card" data-category="cs">
+                    <div class="uc-icon">🎯</div>
+                    <div class="uc-category">Customer Service</div>
+                    <h3>Intelligent Support</h3>
+                    <p>Agen support yang memahami konteks, mengakses sistem backend, menyelesaikan masalah kompleks, dan melakukan eskalasi cerdas saat diperlukan.</p>
+                    <div class="uc-metrics">
+                        <span class="metric">
+                            <strong>85%</strong> resolved auto
+                        </span>
+                        <span class="metric">
+                            <strong>3x</strong> CSAT score
+                        </span>
+                    </div>
+                </div>
+
+                <div class="usecase-card" data-category="security">
+                    <div class="uc-icon">🛡️</div>
+                    <div class="uc-category">Cybersecurity</div>
+                    <h3>Threat Detection</h3>
+                    <p>Agen keamanan yang memonitor aktivitas anomali, menganalisis ancaman, merespons insiden secara otomatis, dan memperbarui defense policies.</p>
+                    <div class="uc-metrics">
+                        <span class="metric">
+                            <strong>< 1min</strong> response time
+                        </span>
+                        <span class="metric">
+                            <strong>99%</strong> threat detected
+                        </span>
+                    </div>
+                </div>
+
+                <div class="usecase-card" data-category="edu">
+                    <div class="uc-icon">🎓</div>
+                    <div class="uc-category">Education</div>
+                    <h3>Personalized Tutoring</h3>
+                    <p>Agen pendidikan yang mengadaptasi kurikulum berdasarkan kemajuan siswa, memberikan feedback personal, dan mengidentifikasi area yang perlu perbaikan.</p>
+                    <div class="uc-metrics">
+                        <span class="metric">
+                            <strong>40%</strong> lebih efektif
+                        </span>
+                        <span class="metric">
+                            <strong>100%</strong> personalized
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges Section -->
+    <section class="section" id="challenges">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Pertimbangan</div>
+                <h2 class="section-title">Tantangan & Best Practices</h2>
+                <p class="section-subtitle">Hal-hal penting yang perlu diperhatikan saat membangun sistem Agentic AI</p>
+            </div>
+
+            <div class="challenges-grid">
+                <div class="challenge-card">
+                    <div class="ch-icon warning">⚠️</div>
+                    <h3>Tantangan Utama</h3>
+                    <ul class="ch-list">
+                        <li>
+                            <strong>Hallucination & Reliability</strong>
+                            <span>LLM dapat menghasilkan informasi yang salah</span>
+                        </li>
+                        <li>
+                            <strong>Cost Management</strong>
+                            <span>Loop yang panjang dapat menghabiskan banyak token</span>
+                        </li>
+                        <li>
+                            <strong>Safety & Alignment</strong>
+                            <span>Agen otonom dapat mengambil tindakan berbahaya</span>
+                        </li>
+                        <li>
+                            <strong>Observability</strong>
+                            <span>Sulit men-debug sistem multi-step yang kompleks</span>
+                        </li>
+                        <li>
+                            <strong>Latency</strong>
+                            <span>Banyak LLM call = response time yang lebih lama</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="ch-icon good">✅</div>
+                    <h3>Best Practices</h3>
+                    <ul class="ch-list">
+                        <li>
+                            <strong>Human-in-the-loop</strong>
+                            <span>Tambahkan checkpoint manusia untuk keputusan kritis</span>
+                        </li>
+                        <li>
+                            <strong>Guardrails</strong>
+                            <span>Definisikan batasan jelas tentang apa yang agen boleh lakukan</span>
+                        </li>
+                        <li>
+                            <strong>Iterasi Terbatas</strong>
+                            <span>Tetapkan max_iterations untuk mencegah infinite loop</span>
+                        </li>
+                        <li>
+                            <strong>Logging Komprehensif</strong>
+                            <span>Catat setiap langkah untuk debugging dan audit</span>
+                        </li>
+                        <li>
+                            <strong>Testing & Evals</strong>
+                            <span>Uji agen secara menyeluruh sebelum production</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="challenge-card full-width">
+                    <div class="ch-icon info">🔮</div>
+                    <h3>Masa Depan Agentic AI</h3>
+                    <div class="future-grid">
+                        <div class="future-item">
+                            <span class="fi-icon">🌐</span>
+                            <div>
+                                <strong>Internet of Agents</strong>
+                                <p>Jaringan agen AI yang berkomunikasi dan berkolaborasi secara global, seperti "internet" untuk sistem AI</p>
+                            </div>
+                        </div>
+                        <div class="future-item">
+                            <span class="fi-icon">🧬</span>
+                            <div>
+                                <strong>Self-improving Agents</strong>
+                                <p>Agen yang mampu memodifikasi dan meningkatkan kemampuan dirinya sendiri secara otonom</p>
+                            </div>
+                        </div>
+                        <div class="future-item">
+                            <span class="fi-icon">🏭</span>
+                            <div>
+                                <strong>Agentic Enterprise</strong>
+                                <p>Seluruh workflow bisnis dijalankan oleh jaringan agen yang terintegrasi penuh</p>
+                            </div>
+                        </div>
+                        <div class="future-item">
+                            <span class="fi-icon">🤖</span>
+                            <div>
+                                <strong>Physical World Agents</strong>
+                                <p>Agen AI yang mengendalikan robot dan sistem fisik untuk otomasi dunia nyata</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Siap Membangun Agen AI Pertama Anda?</h2>
+                <p>Mulai dengan OpenClaw dan buat sistem AI otonom yang powerful dalam hitungan menit</p>
+                <div class="cta-buttons">
+                    <a href="#implementation" class="btn btn-primary btn-large">
+                        Mulai Sekarang
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#openclaw" class="btn btn-outline btn-large">Pelajari OpenClaw</a>
+                </div>
+                <div class="cta-install">
+                    <code>pip install openclaw</code>
+                    <button class="copy-inline" onclick="copyToClipboard('pip install openclaw')">Copy</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span>⚡</span> AgenticAI Guide
+                    </div>
+                    <p>Panduan komprehensif tentang Agentic AI dan implementasi menggunakan OpenClaw framework.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="#intro">Pengenalan</a></li>
+                        <li><a href="#how-it-works">Cara Kerja</a></li>
+                        <li><a href="#components">Komponen</a></li>
+                        <li><a href="#openclaw">OpenClaw</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#implementation">Implementasi</a></li>
+                        <li><a href="#usecases">Use Cases</a></li>
+                        <li><a href="#challenges">Best Practices</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Agentic AI Guide · Dibangun dengan ❤️ untuk komunitas AI Indonesia</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
